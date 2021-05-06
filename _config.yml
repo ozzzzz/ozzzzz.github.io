@@ -1,13 +1,12 @@
 remote_theme: daattali/beautiful-jekyll@5.0.0
 
 title: Bogdan Neterebskii
-
 author: Bogdan Neterebskii
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  Resume | CV: "resume_cv"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
