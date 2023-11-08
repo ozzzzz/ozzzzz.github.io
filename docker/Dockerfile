@@ -2,12 +2,6 @@ FROM ruby:3.1.3
 
 WORKDIR /opt/app
 
-# COPY _pages _pages
-# COPY _sass _sass
-# COPY assets assets
-
-# COPY index.html resume_cv.md ./
-
 COPY _config.yml Gemfile ./
 
 RUN bundle config set --local path 'vendor/bundle'
