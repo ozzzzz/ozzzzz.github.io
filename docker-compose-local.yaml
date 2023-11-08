@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  ozzzzz-site:
+    image: local/ozzzzz-site:latest
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    ports:
+      - 4000:4000
+    volumes:
+      - ./.git:/opt/app/.git
+      - ./_pages:/opt/app/_pages
+      - ./assets:/opt/app/assets
+      - ./_sass:/opt/app/_sass
+      - ./index.html:/opt/app/index.html
+      - ./_config.yml:/opt/app/_config.yml
+      - ./Gemfile:/opt/app/Gemfile
+    restart: always

@@ -2,29 +2,20 @@
 
 ## Local setup in Docker
 
-### Install and run
+To run locally in Docker:
 
-Build image:
-
-```
-docker build -t ozzzzz-site -f docker/Dockerfile .
+```bash
+docker-compose -f docker-compose-local.yaml up -d
 ```
 
-Run with detached:
+To turn off:
 
-```
-docker run -d -p 4000:4000 --name ozzzzz-site ozzzzz-site
-```
-
-Or run with attached and remove after stop:
-
-```
-docker run --rm -it -p 4000:4000 --name ozzzzz-site ozzzzz-site
+```bash
+docker-compose -f docker-compose-local.yaml stop
 ```
 
-### Stop and remove
+To delete containers:
 
-```
-docker rm -f ozzzzz-site
-docker rmi ozzzzz-site
+```bash
+docker-compose -f docker-compose-local.yaml rm -f
 ```
