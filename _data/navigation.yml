@@ -1,0 +1,9 @@
+main:
+  - title: "Quick-Start Guide"
+    url: /docs/quick-start-guide/
+  - title: "Posts"
+    url: /year-archive/
+  - title: "Pages"
+    url: /page-archive/
+  - title: "CV"
+    url: https://github.com/ozzzzz/CV
