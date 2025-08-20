@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AppShell, Burger, Title, NavLink, Avatar, Menu, Group, ActionIcon } from '@mantine/core'
+import { AppShell, Burger, Title, NavLink, Avatar, Menu, Group, ActionIcon, Badge } from '@mantine/core'
 import { IconBell, IconUser, IconSettings, IconLogout } from '@tabler/icons-react'
 import { Link, useLocation } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ function Navigation({ children }) {
 
   return (
     <AppShell
-      header={{ height: 70 }}
+      header={{ height: 60 }}
       navbar={{
         width: 250,
         breakpoint: 'sm',
@@ -24,7 +24,7 @@ function Navigation({ children }) {
       }}
       padding="md"
     >
-      <AppShell.Header>
+      <AppShell.Header >
         <Group h="100%" px="md" justify="space-between">
           <Burger
             opened={opened}
@@ -32,7 +32,7 @@ function Navigation({ children }) {
             hiddenFrom="sm"
             size="sm"
           />
-          <Title order={3}>Personal Website</Title>
+          <Title order={3}>Bogdan Has Fun</Title>
         </Group>
       </AppShell.Header>
 
