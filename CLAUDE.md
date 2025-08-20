@@ -12,9 +12,8 @@
 - `src/` - Source code
 - `src/components/` - React components
 - `src/pages/` - Page components for routing
-- `src/styles/` - Tailwind and custom styles
+- `src/main.css` - Tailwind and very custom styles (keep it minimal)
 - `public/` - Static assets
-- `dist/` - Build output
 
 ## Possible Structure Updates (add if needed)
 - `src/hooks/` - Custom React hooks
