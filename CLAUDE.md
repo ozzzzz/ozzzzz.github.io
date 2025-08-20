@@ -25,6 +25,24 @@
 - Uses SPA GitHub Pages for proper routing on GitHub Pages
 - Tailwind configured for utility-first styling and positioning (when Mantine is not enough)
 - Mantine provides pre-built components
+- Prefer TypeScript with `.tsx` file extensions over `.jsx`
+- Use the following format for components:
+
+```tsx
+interface SomeComponentProps {
+  prop0: string;
+  prop1: number;
+}
+
+const SomeComponent = ({ prop0, prop1 }: SomeComponentProps) => {
+ return <>
+   <div>{prop0}</div>
+   <div>{prop1}</div>
+ </>
+}
+
+export default SomeComponent;
+```
 
 ### Your Behavior Rules
 - You must thoroughly understand requirements before proposing solutions
