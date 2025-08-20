@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { AppShell, Burger, Title, NavLink, Avatar, Menu, Group, ActionIcon, Badge } from '@mantine/core'
-import { IconBell, IconUser, IconSettings, IconLogout } from '@tabler/icons-react'
+import { AppShell, Burger, Title, NavLink, Group } from '@mantine/core'
 import { Link, useLocation } from 'react-router-dom'
 
 const navigation = [

@@ -1,4 +1,4 @@
-import { Container, Title, Text, Stack, Divider, Paper } from '@mantine/core'
+import { Container, Title, Text, Stack, Paper } from '@mantine/core'
 
 function About() {
   return (
@@ -7,7 +7,7 @@ function About() {
         <Title order={1} size="3rem" weight={600}>
           About Me
         </Title>
-        
+
         <Stack spacing="lg">
           <Paper p="md" withBorder>
             <Title order={3} size="lg" mb="sm">
@@ -18,7 +18,7 @@ function About() {
               I love working with modern technologies and continuously learning new skills.
             </Text>
           </Paper>
-          
+
           <Paper p="md" withBorder>
             <Title order={3} size="lg" mb="sm">
               What I do
@@ -28,7 +28,7 @@ function About() {
               I enjoy building user-friendly interfaces and solving complex problems.
             </Text>
           </Paper>
-          
+
           <Paper p="md" withBorder>
             <Title order={3} size="lg" mb="sm">
               Get in touch

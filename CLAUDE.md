@@ -43,6 +43,8 @@ const SomeComponent = ({ prop0, prop1 }: SomeComponentProps) => {
 
 export default SomeComponent;
 ```
+- use `npm run lint` to check for linting errors
+- use `npm run build` to check for build errors
 
 ### Your Behavior Rules
 - You must thoroughly understand requirements before proposing solutions
