@@ -31,23 +31,22 @@ function Home() {
           </Text>
         </div>
 
-        <Group spacing="lg">
+        <Group spacing="lg" justify="center">
           <Button
             component={Link}
-            to="/about"
+            to="/profile/brief"
             size="lg"
             variant="filled"
           >
-            Learn more
+            Profile snapshot
           </Button>
           <Button
             component={Link}
-            to="/projects"
+            to="/profile/detailed"
             size="lg"
-            variant="subtle"
-            rightSection={<span>→</span>}
+            variant="outline"
           >
-            View projects
+            Full profile
           </Button>
         </Group>
       </Stack>

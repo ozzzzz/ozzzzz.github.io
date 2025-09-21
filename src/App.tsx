@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Container, Title } from '@mantine/core'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
-import About from './pages/About'
+import ProfileBrief from './pages/ProfileBrief'
+import ProfileDetailed from './pages/ProfileDetailed'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -10,17 +12,14 @@ function App() {
       <Navigation>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/profile/brief" element={<ProfileBrief />} />
+          <Route path="/profile/detailed" element={<ProfileDetailed />} />
           <Route path="/projects" element={
             <Container py={60}>
               <Title order={1} ta="center">Projects - Coming Soon</Title>
             </Container>
           } />
-          <Route path="/contact" element={
-            <Container py={60}>
-              <Title order={1} ta="center">Contact - Coming Soon</Title>
-            </Container>
-          } />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Navigation>
     </Router>
