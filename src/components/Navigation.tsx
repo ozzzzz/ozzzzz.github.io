@@ -1,58 +1,104 @@
-import { useState } from 'react'
-import { AppShell, Burger, Title, NavLink, Group } from '@mantine/core'
-import { Link, useLocation } from 'react-router-dom'
+import { Burger, Button, Container, Drawer, Group, Stack, Text, useMantineTheme } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
+import { NavLink, useLocation } from 'react-router-dom'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Profile Snapshot', href: '/profile/brief' },
-  { name: 'Profile Detailed', href: '/profile/detailed' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
+const links = [
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Projects', to: '/projects' }
 ]
 
-function Navigation({ children }) {
-  const [opened, setOpened] = useState(false)
+const Navigation = () => {
+  const theme = useMantineTheme()
   const location = useLocation()
+  const [opened, { toggle, close }] = useDisclosure(false)
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/'
+    }
+
+    return location.pathname.startsWith(path)
+  }
 
   return (
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{
-        width: 250,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened }
-      }}
-      padding="md"
-    >
-      <AppShell.Header >
-        <Group h="100%" px="md" justify="space-between">
+    <>
+      <Container size="lg" px="md" h="100%">
+        <Group justify="space-between" align="center" h="100%">
+          <Text
+            component={NavLink}
+            to="/"
+            fw={600}
+            size="lg"
+            style={{ textDecoration: 'none', color: theme.colors.ember[6] }}
+            onClick={close}
+          >
+            Bogdan Neterebskii
+          </Text>
+
+          <Group gap="xs" visibleFrom="sm">
+            {links.map((link) => {
+              const active = isActive(link.to)
+
+              return (
+                <Button
+                  key={link.to}
+                  component={NavLink}
+                  to={link.to}
+                  variant={active ? 'filled' : 'light'}
+                  color={active ? 'ember' : 'pine'}
+                  radius="xl"
+                  onClick={close}
+                >
+                  {link.label}
+                </Button>
+              )
+            })}
+          </Group>
+
           <Burger
-            opened={opened}
-            onClick={() => setOpened(!opened)}
             hiddenFrom="sm"
+            opened={opened}
+            onClick={toggle}
+            aria-label="Toggle navigation"
+            color={theme.colors.ember[6]}
             size="sm"
           />
-          <Title order={3}>Bogdan Has Fun</Title>
         </Group>
-      </AppShell.Header>
+      </Container>
 
-      <AppShell.Navbar p="md">
-        {navigation.map((item) => (
-          <NavLink
-            key={item.name}
-            component={Link}
-            to={item.href}
-            label={item.name}
-            active={location.pathname === item.href}
-            onClick={() => setOpened(false)}
-          />
-        ))}
-      </AppShell.Navbar>
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="100%"
+        padding="md"
+        hiddenFrom="sm"
+        overlayProps={{ color: theme.colors.pine[8], opacity: 0.35 }}
+        styles={{ content: { backgroundColor: theme.colors.sage[0] } }}
+      >
+        <Stack gap="md" mt="lg">
+          {links.map((link) => {
+            const active = isActive(link.to)
 
-      <AppShell.Main>
-        {children}
-      </AppShell.Main>
-    </AppShell>
+            return (
+              <Button
+                key={link.to}
+                component={NavLink}
+                to={link.to}
+                variant={active ? 'filled' : 'light'}
+                color={active ? 'ember' : 'pine'}
+                size="md"
+                radius="md"
+                fullWidth
+                onClick={close}
+              >
+                {link.label}
+              </Button>
+            )
+          })}
+        </Stack>
+      </Drawer>
+    </>
   )
 }
 
