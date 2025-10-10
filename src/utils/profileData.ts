@@ -65,13 +65,16 @@ export interface ProfileData {
   interests: string[];
 }
 
+// Calculate total years of experience starting from Dec 2013 until now
+const totalExperiencesYears: number = new Date().getFullYear() - 2013;
+
 const profileData: ProfileData = {
   name: 'Bogdan Neterebskii',
   headline: 'Senior Software Engineer and Technical Leader',
   location: 'Belgrade, Serbia',
   currentFocus: 'Building reliable software systems that connect physical products, data, and AI.',
   overview: [
-    'Engineer with 11 years of hands-on development experience across backend, frontend, and ML projects.',
+    `Engineer with ${totalExperiencesYears} years of hands-on development experience across backend, frontend, and ML projects.`,
     'Led a 25 person organisation while staying close to the codebase and delivery processes.',
     'Motivated by solving business problems through research, automation, and pragmatic engineering.'
   ],
@@ -82,24 +85,24 @@ const profileData: ProfileData = {
     'Explorations in robotics, 3D printing, and AI'
   ],
   quickFacts: [
-    { label: 'Experience', value: '11 years' },
+    { label: 'Experience', value: `${totalExperiencesYears} years` },
     { label: 'Leadership', value: '3 years' },
-    { label: 'Current Role', value: 'Senior Software Developer @ FunkFlow' },
+    { label: 'Current Role', value: 'Senior Software Developer @ All3' },
     { label: 'Previous Focus', value: 'NEOM digital core at Nortal' }
   ],
   contacts: [
-    { label: 'Email', value: 'bog2dan1@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
+    { label: 'Email', value: 'b*******@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
     { label: 'LinkedIn', value: 'bogdan-neterebskii', href: 'https://www.linkedin.com/in/bogdan-neterebskii/' },
     { label: 'GitHub', value: 'ozzzzz', href: 'https://github.com/ozzzzz' }
   ],
   experiences: [
     {
       role: 'Senior Software Developer',
-      company: 'FunkFlow',
-      companyUrl: 'https://www.funkflow.com/',
+      company: 'All3',
+      companyUrl: 'https://www.all3.com/',
       location: 'Belgrade, Serbia',
       period: 'May 2024 - Present',
-      technologies: ['Python', 'React', 'Rhino', 'Grasshopper', 'RFEM6'],
+      technologies: ['Python', 'React', 'ThreeJS', 'Rhino', 'Grasshopper', 'RFEM6'],
       summary: 'Designing digital tooling that accelerates the full prefabricated construction workflow from brief to factory floor.',
       contributions: [
         'Model structural options and automate safety checks with FEM analysis to ensure resilient designs.',

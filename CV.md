@@ -18,8 +18,6 @@ These principles are my global approach and stay with me across roles, teams, an
 
 > “My goal is to make the team faster and the work easier when I am around.”
 
-These habits shape how I onboard teammates and set the tone for project kickoffs.
-
 ## Contacts
 
 - email: [bog2dan1@gmail.com](mailto:bog2dan1@gmail.com)

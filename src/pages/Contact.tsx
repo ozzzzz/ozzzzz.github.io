@@ -1,56 +1,38 @@
-import { Container, Title, Text, Stack, Paper, Anchor, Group, Badge, SimpleGrid } from '@mantine/core'
+import { Card, Container, Stack, Text, Title } from '@mantine/core'
+import ContactLinks from '../components/ContactLinks'
 import profileData from '../utils/profileData'
 
-function Contact() {
-  const { name, location, contacts, interests } = profileData
+const Contact = () => {
+  const { location, contacts } = profileData
 
   return (
-    <Container size="md" py={60}>
-      <Stack spacing="xl">
-        <Stack spacing="xs">
-          <Title order={1}>Connect with {name}</Title>
-          <Text color="dimmed">Based in {location}</Text>
-          <Text>
-            The quickest way to reach me is through the channels below. I am always open to
-            discussing collaborations around software, research, or creative tech experiments.
-          </Text>
+    <Container size="lg" py="xl">
+      <Stack gap="xl">
+        <Stack gap="xs">
+          <Title order={1} c="pine.9">
+            Contact
+          </Title>
         </Stack>
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
-          {contacts.map((contact) => (
-            <Paper key={contact.label} withBorder p="lg" radius="md">
-              <Text fw={600}>{contact.label}</Text>
-              <Anchor href={contact.href} target="_blank" rel="noreferrer">
-                {contact.value}
-              </Anchor>
-            </Paper>
-          ))}
-        </SimpleGrid>
-
-        <Paper withBorder p="lg" radius="md">
-          <Title order={3} size="1.2rem">Topics I love to talk about</Title>
-          <Group mt="sm" spacing="sm">
-            {interests.map((interest) => (
-              <Badge key={interest} variant="light" size="lg">
-                {interest}
-              </Badge>
-            ))}
-          </Group>
-        </Paper>
-
-        <Paper withBorder p="lg" radius="md">
-          <Title order={3} size="1.2rem">What to expect</Title>
-          <Stack spacing="sm" mt="sm">
-            <Text>
-              I usually respond within a couple of days. Please include a short overview of the
-              problem you are trying to solve so I can prepare meaningful next steps.
+        <Card withBorder p="lg" radius="md">
+          <Stack gap="sm">
+            <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+              Online
             </Text>
-            <Text>
-              For urgent matters you can flag it in the subject. I am happy to hop on a quick call once we
-              sync up over email or LinkedIn.
+            <ContactLinks contacts={contacts} />
+          </Stack>
+        </Card>
+
+        <Card withBorder p="lg" radius="md">
+          <Stack gap="sm">
+            <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+              Offline
+            </Text>
+            <Text size="md" c="pine.7">
+              Somewhere near {location}
             </Text>
           </Stack>
-        </Paper>
+        </Card>
       </Stack>
     </Container>
   )

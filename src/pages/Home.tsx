@@ -1,5 +1,6 @@
-import { Badge, Button, Card, Container, Divider, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Badge, Card, Container, Divider, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import profileData from '../utils/profileData'
+import ContactLinks from '../components/ContactLinks'
 
 const Home = () => {
   const {
@@ -30,22 +31,7 @@ const Home = () => {
           <Text size="lg" c="pine.6">
             {currentFocus}
           </Text>
-          <Group gap="sm" mt="sm">
-            {contacts.map((contact, index) => (
-              <Button
-                key={contact.href}
-                component="a"
-                href={contact.href}
-                target="_blank"
-                rel="noreferrer"
-                variant={index === 0 ? 'filled' : 'light'}
-                color={index === 0 ? 'ember' : 'pine'}
-                radius="xl"
-              >
-                {contact.label}
-              </Button>
-            ))}
-          </Group>
+          <ContactLinks variant="buttons" contacts={contacts} groupProps={{ mt: 'sm' }} />
         </Stack>
 
         <Card withBorder p="lg" radius="md">
@@ -176,13 +162,7 @@ const Home = () => {
             <Text c="pine.7">
               I love hearing about ambitious problems that blend software, data, and physical products. Reach out if you want to explore something together.
             </Text>
-            <Group gap="sm" mt="sm">
-              {contacts.map((contact) => (
-                <Badge key={contact.value} color="sage" variant="light" radius="xl">
-                  {contact.value}
-                </Badge>
-              ))}
-            </Group>
+            <ContactLinks variant="badges" contacts={contacts} groupProps={{ mt: 'sm' }} />
           </Stack>
         </Card>
 
