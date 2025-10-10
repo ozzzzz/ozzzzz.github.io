@@ -10,7 +10,7 @@ const Contact = () => {
       <Stack gap="xl">
         <Stack gap="xs">
           <Title order={1} c="pine.9">
-            Contact
+            Contacts
           </Title>
         </Stack>
 

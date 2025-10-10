@@ -5,6 +5,12 @@
 - Highly motivated by constant learning, my focus is on solving business problems.
 - I am passionate about research tasks, robotics, 3D printing and AI-related topics.
 
+## Contacts
+
+- email: [bog2dan1@gmail.com](mailto:bog2dan1@gmail.com)
+- linkedin: [bogdan-neterebskii](https://www.linkedin.com/in/bogdan-neterebskii/)
+- github: [ozzzzz](https://github.com/ozzzzz)
+
 ## Principles
 
 These principles are my global approach and stay with me across roles, teams, and companies.
@@ -17,12 +23,6 @@ These principles are my global approach and stay with me across roles, teams, an
 - **Responsible AI usage.** Let AI handle routine work, but review every line, understand its limits, and step in manually whenever needed.
 
 > “My goal is to make the team faster and the work easier when I am around.”
-
-## Contacts
-
-- email: [bog2dan1@gmail.com](mailto:bog2dan1@gmail.com)
-- linkedin: [bogdan-neterebskii](https://www.linkedin.com/in/bogdan-neterebskii/)
-- github: [ozzzzz](https://github.com/ozzzzz)
 
 ## Experience
 

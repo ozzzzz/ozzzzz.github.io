@@ -14,10 +14,10 @@ const About = () => {
       <Stack gap="xl">
         <Stack gap="xs">
           <Title order={1} c="pine.9">
-            About
+            About me
           </Title>
           <Text size="lg" c="pine.6">
-            Exploring the projects, people, and practices that shaped my approach to engineering.
+            Toggle between a concise overview and the full CV-backed story of my work.
           </Text>
         </Stack>
 

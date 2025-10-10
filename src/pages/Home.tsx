@@ -1,4 +1,5 @@
-import { Badge, Card, Container, Divider, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Badge, Button, Card, Container, Divider, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Link } from 'react-router-dom'
 import profileData from '../utils/profileData'
 import ContactLinks from '../components/ContactLinks'
 
@@ -31,7 +32,14 @@ const Home = () => {
           <Text size="lg" c="pine.6">
             {currentFocus}
           </Text>
-          <ContactLinks variant="buttons" contacts={contacts} groupProps={{ mt: 'sm' }} />
+          <Group gap="sm" wrap="wrap" mt="sm">
+            <Button component={Link} to="/about" radius="xl" color="ember">
+              About me
+            </Button>
+            <Button component={Link} to="/contact" variant="light" radius="xl" color="pine">
+              Contacts
+            </Button>
+          </Group>
         </Stack>
 
         <Card withBorder p="lg" radius="md">

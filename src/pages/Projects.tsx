@@ -2,39 +2,26 @@ import { Badge, Card, Container, Group, SimpleGrid, Stack, Text, Title } from '@
 
 interface ProjectItem {
   title: string;
-  status: 'In research' | 'In progress' | 'Exploring';
+  status: 'In research' | 'In progress' | 'Exploring' | 'Completed';
   timeframe: string;
   description: string;
 }
 
 const projects: ProjectItem[] = [
   {
-    title: 'Factory-ready computational design tools',
-    status: 'In progress',
-    timeframe: '2024 — Present',
+    title: 'Support for the Veterinary System',
+    status: 'Completed',
+    timeframe: '2021 — 2024',
     description:
-      'Building automation that links architectural intent with fabrication data, keeping structural analysis and production in sync.'
-  },
-  {
-    title: 'Structural exploration playbook',
-    status: 'In research',
-    timeframe: '2024',
-    description:
-      'Documenting repeatable workflows that turn Grasshopper and FEM experiments into deployable services for engineering teams.'
-  },
-  {
-    title: 'Robotics and AI sketchbook',
-    status: 'Exploring',
-    timeframe: 'Ongoing',
-    description:
-      'Weekend experiments that combine motion planning, computer vision, and physical prototyping to prototype new interfaces.'
+      'Supporting a platform for the veterinary system, written in PHP and pure JavaScript.'
   }
 ]
 
 const statusColor: Record<ProjectItem['status'], string> = {
   'In progress': 'ember',
   'In research': 'pine',
-  Exploring: 'sunrise'
+  'Exploring': 'sunrise',
+  'Completed': 'pine'
 }
 
 const Projects = () => {
@@ -46,7 +33,7 @@ const Projects = () => {
             Projects
           </Title>
           <Text size="lg" c="pine.6">
-            Selected initiatives that connect software, physical products, and data-rich workflows.
+            My side projects and research explorations.
           </Text>
         </Stack>
 

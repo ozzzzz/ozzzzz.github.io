@@ -74,9 +74,10 @@ const profileData: ProfileData = {
   location: 'Belgrade, Serbia',
   currentFocus: 'Building reliable software systems that connect physical products, data, and AI.',
   overview: [
-    `Engineer with ${totalExperiencesYears} years of hands-on development experience across backend, frontend, and ML projects.`,
-    'Led a 25 person organisation while staying close to the codebase and delivery processes.',
-    'Motivated by solving business problems through research, automation, and pragmatic engineering.'
+    `Senior software engineer with ${totalExperiencesYears} years of experience across backend, frontend, and ML projects.`,
+    'Comfortable switching between leadership and individual contributor roles after guiding a 25 person team for three years.',
+    'Motivated by constant learning and pragmatic problem solving that keeps business goals in focus.',
+    'Excited about research-heavy tasks, robotics, 3D printing, and AI-augmented workflows.'
   ],
   focusAreas: [
     'High impact backend services and data pipelines',
@@ -91,7 +92,7 @@ const profileData: ProfileData = {
     { label: 'Previous Focus', value: 'NEOM digital core at Nortal' }
   ],
   contacts: [
-    { label: 'Email', value: 'b*******@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
+    { label: 'Email', value: 'bog2dan1@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
     { label: 'LinkedIn', value: 'bogdan-neterebskii', href: 'https://www.linkedin.com/in/bogdan-neterebskii/' },
     { label: 'GitHub', value: 'ozzzzz', href: 'https://github.com/ozzzzz' }
   ],
@@ -105,9 +106,9 @@ const profileData: ProfileData = {
       technologies: ['Python', 'React', 'ThreeJS', 'Rhino', 'Grasshopper', 'RFEM6'],
       summary: 'Designing digital tooling that accelerates the full prefabricated construction workflow from brief to factory floor.',
       contributions: [
-        'Model structural options and automate safety checks with FEM analysis to ensure resilient designs.',
-        'Align computational design outputs with prefabrication requirements to keep production flows predictable.',
-        'Streamline cross discipline collaboration by wrapping algorithms into accessible services.'
+        'Develop services and algorithms that accelerate the construction workflow from project brief to prefabrication.',
+        'Study load-bearing structures and run FEM analysis with RFEM6 to validate safety and performance.',
+        'Integrate computational design outputs with prefabrication pipelines so factory production stays predictable.'
       ]
     },
     {
@@ -119,9 +120,9 @@ const profileData: ProfileData = {
       technologies: ['Python', 'Spark', 'React', 'Kubernetes', 'Kafka', 'Keycloak'],
       summary: 'Contributed to the digital core for NEOM, delivering dependable services for city scale operations.',
       contributions: [
-        'Co-created a microservice architecture and maintained an up to date systems map for rapid onboarding.',
-        'Delivered backend services and mobile integrations under aggressive deadlines for the NEOM Airport launch.',
-        'Enabled knowledge sharing practices that improved cross team visibility and delivery pace.'
+        'Co-created the microservice architecture for NEOM and kept the system diagrams current for the team.',
+        'Delivered backend systems and supported mobile development for NEOM Airport releases on tight timelines.',
+        'Drove knowledge sharing practices that kept distributed teams aligned during rapid delivery.'
       ]
     },
     {
@@ -133,8 +134,8 @@ const profileData: ProfileData = {
       technologies: ['Java', 'Python', 'Docker', 'GitLab', 'NSIS'],
       summary: 'Modernised a 20 year old desktop simulation platform across all major operating systems.',
       contributions: [
-        'Redesigned release and deployment tooling with new infrastructure as code and CI/CD pipelines.',
-        'Removed delivery bottlenecks by rebuilding installation flows and automation scripts.'
+        'Redesigned the cross-platform desktop application after two decades of legacy evolution.',
+        'Rebuilt infrastructure as code and GitLab pipelines to remove release bottlenecks.'
       ]
     },
     {
@@ -146,9 +147,9 @@ const profileData: ProfileData = {
       technologies: ['Haskell', 'Python', 'React', 'RabbitMQ', 'GitLab', 'Kubernetes'],
       summary: 'Led a 25 person group delivering data platforms and lab automation for drug discovery.',
       contributions: [
-        'Launched services that connect diverse biological datasets spanning antibodies, plasmids, and lab workflows.',
-        'Delivered dozens of algorithms that shorten the path from in silico sequences to wet lab execution.',
-        'Built a React and Next.js interface that exposed complex pipelines through a lab friendly UX.'
+        'Developed services that store and connect biological data produced during drug discovery, from antibodies to lab workflows.',
+        'Delivered dozens of lab algorithms that shorten the path from in silico sequences to physical proteins or viruses.',
+        'Built a React and Next.js interface backed by Haskell and Python services orchestrated through Kubernetes queues.'
       ]
     },
     {
@@ -160,9 +161,9 @@ const profileData: ProfileData = {
       technologies: ['Haskell', 'Python', 'Neo4j', 'MongoDB'],
       summary: 'Developed computational tools for protein design and internal project coordination.',
       contributions: [
-        'Built graph driven knowledge discovery pipelines on top of the full PDB database.',
-        'Collaborated with research institutes on optimisation approaches for protein structure analysis.',
-        'Delivered a project management service backed by MongoDB and Haskell services.'
+        'Developed algorithms that mine the full PDB database for rational in silico modelling, showcased at PEGS 2019.',
+        'Partnered with the Matrosov Institute on optimisation methods for protein structure analysis, resulting in a published article.',
+        'Led a project management service powered by a Haskell and MongoDB backend with a React frontend.'
       ]
     },
     {
@@ -174,8 +175,8 @@ const profileData: ProfileData = {
       technologies: ['Haskell', 'Python', 'ZeroMQ', 'Neo4j'],
       summary: 'Advanced protein folding research with production ready distributed tooling.',
       contributions: [
-        'Delivered an antibody structure prediction workflow rivaling industry tools such as Rosetta.',
-        'Created a ZeroMQ based task distribution bus with bindings for Haskell and Python.'
+        'Created an antibody structure prediction workflow comparable to Rosetta and Schrödinger tooling.',
+        'Built a ZeroMQ based task distribution bus with bindings for Haskell and Python.'
       ]
     },
     {
@@ -201,8 +202,8 @@ const profileData: ProfileData = {
       technologies: ['Qt'],
       summary: 'Shipped positioning algorithms and connectivity modules for industrial laser tools.',
       contributions: [
-        'Created motion control algorithms that improved hardware precision.',
-        'Integrated disparate product components using protobuf based communication.'
+        'Developed positioning algorithms for industrial laser tools.',
+        'Created modules that connected product components through protobuf communication.'
       ]
     },
     {
@@ -213,9 +214,7 @@ const profileData: ProfileData = {
       period: 'Jan 2015 - Jun 2015',
       technologies: ['Python', 'LaTeX'],
       summary: 'Solved aircraft navigation problems with optimisation techniques.',
-      contributions: [
-        'Developed trajectory optimisation algorithms for aerospace use cases.'
-      ]
+      contributions: ['Solved aircraft navigation problems and built trajectory optimisation algorithms.']
     },
     {
       role: 'Junior Web Developer',
@@ -225,8 +224,8 @@ const profileData: ProfileData = {
       technologies: ['WordPress', 'JavaScript', 'CSS'],
       summary: 'Delivered marketing websites and branding assets.',
       contributions: [
-        'Implemented custom WordPress themes with interactive JavaScript features.',
-        'Collaborated with designers on typography assets.'
+        'Created WordPress sites customised with JavaScript features for marketing campaigns.',
+        'Collaborated with designers on a bespoke font and supporting brand assets.'
       ]
     }
   ],
@@ -284,9 +283,15 @@ const profileData: ProfileData = {
       publication: 'National Institutes of Health',
       year: '2022',
       url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318028/'
+    },
+    {
+      title: 'Expression of the SARS-CoV-2 receptor-binding domain by live attenuated influenza vaccine virus as a strategy for designing a bivalent vaccine against COVID-19 and influenza',
+      publication: 'National Institutes of Health',
+      year: '2024',
+      url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11003101/'
     }
   ],
-  interests: ['Robotics', '3D printing', 'AI research', 'Efficient delivery workflows']
+  interests: ['Research tasks', 'Robotics', '3D printing', 'AI-assisted engineering']
 }
 
 export default profileData
