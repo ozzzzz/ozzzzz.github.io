@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;800&display=swap');
 @import "tailwindcss";
 
 @layer base {
+
   html,
   body {
     @apply bg-[#f9fafb] text-slate-900 antialiased;

@@ -6,16 +6,16 @@ const Home = () => {
   return (
     <Container size="lg" py="xl">
       <Grid gutter="xl" align="stretch">
-        <Grid.Col span={{ base: 12, md: 5 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <Image
             src={bogdanPhoto}
             alt="Bogdan Neterebskii"
             radius="md"
-            w={{ base: '100%', md: 320 }}
+            w="100%"
             mx="auto"
           />
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 7 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <Stack gap="lg" align="flex-start">
             <Text size="lg" c="pine.6">
               Welcome text goes here. Share a short introduction or current focus.

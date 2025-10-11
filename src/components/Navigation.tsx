@@ -29,12 +29,19 @@ const Navigation = () => {
           <Text
             component={NavLink}
             to="/"
-            fw={600}
+            fw={800}
             size="lg"
-            style={{ textDecoration: 'none', color: theme.colors.ember[6] }}
+            style={{
+              textDecoration: 'none',
+              color: theme.colors.ember[6],
+              fontFamily: theme.other.logoFont,
+              fontWeight: 800,
+              fontSize: '2.5rem',
+              lineHeight: 1.1
+            }}
             onClick={close}
           >
-            Bogdan Neterebskii
+            Bogdan Has Fun
           </Text>
 
           <Group gap="xs" visibleFrom="sm">

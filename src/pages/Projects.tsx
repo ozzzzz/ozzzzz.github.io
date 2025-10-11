@@ -13,7 +13,7 @@ const projects: ProjectItem[] = [
     status: 'Completed',
     timeframe: '2021 — 2024',
     description:
-      'Supporting a platform for the veterinary system, written in PHP and pure JavaScript.'
+      'Supporting and developing a platform for the veterinary system, written in PHP and pure JavaScript.'
   }
 ]
 
@@ -33,7 +33,7 @@ const Projects = () => {
             Projects
           </Title>
           <Text size="lg" c="pine.6">
-            My side projects and research explorations.
+            My side projects and research explorations. Will be updated soon.
           </Text>
         </Stack>
 

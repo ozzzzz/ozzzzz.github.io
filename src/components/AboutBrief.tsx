@@ -1,4 +1,4 @@
-import { Badge, Card, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Card, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
 
 interface AboutBriefProps {
@@ -6,7 +6,7 @@ interface AboutBriefProps {
 }
 
 const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
-  const { name, headline, currentFocus, overview, quickFacts, contacts, focusAreas, experiences } = data
+  const { name, headline, currentFocus, overview, quickFacts, contacts, experiences } = data
   const highlightedExperiences = experiences.slice(0, 3)
 
   return (
@@ -69,21 +69,6 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
               </Text>
             ))}
           </Stack>
-        </Stack>
-      </Card>
-
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
-            Focus Areas
-          </Text>
-          <Group gap="xs">
-            {focusAreas.map((area) => (
-              <Badge key={area} color="sunrise" variant="light" radius="xl">
-                {area}
-              </Badge>
-            ))}
-          </Group>
         </Stack>
       </Card>
 

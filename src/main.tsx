@@ -70,7 +70,10 @@ const theme = createTheme({
   primaryColor: 'ember',
   primaryShade: 6,
   fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-  defaultRadius: 'md'
+  defaultRadius: 'md',
+  other: {
+    logoFont: '"Dancing Script", cursive'
+  }
 })
 
 createRoot(rootElement).render(

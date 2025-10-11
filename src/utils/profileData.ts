@@ -54,7 +54,6 @@ export interface ProfileData {
   location: string;
   currentFocus: string;
   overview: string[];
-  focusAreas: string[];
   quickFacts: QuickFact[];
   contacts: ContactLink[];
   experiences: ExperienceItem[];
@@ -78,12 +77,6 @@ const profileData: ProfileData = {
     'Comfortable switching between leadership and individual contributor roles after guiding a 25 person team for three years.',
     'Motivated by constant learning and pragmatic problem solving that keeps business goals in focus.',
     'Excited about research-heavy tasks, robotics, 3D printing, and AI-augmented workflows.'
-  ],
-  focusAreas: [
-    'High impact backend services and data pipelines',
-    'Bridging research prototypes with production systems',
-    'Team leadership with transparent communication',
-    'Explorations in robotics, 3D printing, and AI'
   ],
   quickFacts: [
     { label: 'Experience', value: `${totalExperiencesYears} years` },
