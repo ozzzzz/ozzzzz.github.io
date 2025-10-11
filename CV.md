@@ -15,14 +15,14 @@
 
 These principles are my global approach and stay with me across roles, teams, and companies.
 
-- **Transparency first.** [C4 models](https://c4model.com/) and [Mermaid](https://mermaid.js.org/) diagrams are must-haves for a clear system overview, with Confluence pages, solid READMEs, and how-to blocks maintaining shared context.
-- **Clear proactivity.** Surface context early, flag risks, and keep everyone aligned on what is really happening.
-- **Default tech stack mindset.** Start with proven tools and borrowed best practices, yet stay open to new solutions when they bring measurable value.
+- **Do something valuable.** Either make people’s lives easier and healthier, or reduce environmental impact. No gambling, high-frequency trading or anything else that feels to me wrong.
+- **Transparency first.** [C4 models](https://c4model.com/) and [Mermaid](https://mermaid.js.org/) diagrams are must-haves for a clear system overview, with Confluence pages, solid READMEs, and how-to blocks maintaining shared context. 
 - **Focus on the result.** Keep outcomes visible, measure impact, and change course when the value is not there.
+- **Default tech stack mindset.** Start with proven tools and borrowed best practices, yet stay open to new solutions when they bring measurable value.
 - **Respect time.** Prefer deeper thinking and written pre-mortems over extra meetings; flag risks before large discussions.
 - **Responsible AI usage.** Let AI handle routine work, but review every line, understand its limits, and step in manually whenever needed.
 
-> “My goal is to make the team faster and the work easier when I am around.”
+> “My goal is to make the team more efficient and the work smoother when I’m around than when I’m not.”
 
 ## Experience
 
@@ -32,7 +32,7 @@ These principles are my global approach and stay with me across roles, teams, an
 
 ⏱️ 05.2024 – current time
 
-🔧 Python, React, Rhino + Grasshopper, RFEM6, Keycloak
+🔧 Python, React, ThreeJS, Rhino + Grasshopper, RFEM6, Keycloak
 
 I worked on developing services and algorithms to speed up the building construction process, starting from the project brief, through exploring structural options, and finishing with prefabrication in the factory. This involved studying the physics of load-bearing structures and using [FEM](https://en.wikipedia.org/wiki/Finite_element_method) analysis tools like [RFEM](https://www.dlubal.com/en/products/rfem-fea-software/rfem/what-is-rfem) to ensure safety and optimize structural performance.
 

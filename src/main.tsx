@@ -82,7 +82,14 @@ const theme = createTheme({
     }),
     Text: Text.extend({
       defaultProps: {
-        c: 'pine.6'
+        c: 'pine.6',
+        size: 'lg',
+      }
+    }),
+    TextSelected: Text.extend({
+      defaultProps: {
+        c: 'ember',
+        size: 'lg',
       }
     })
   }
