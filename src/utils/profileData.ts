@@ -48,6 +48,13 @@ export interface ArticleItem {
   url?: string;
 }
 
+export interface PatentItem {
+  title: string;
+  number: string;
+  year: string;
+  url?: string;
+}
+
 export interface ProfileData {
   name: string;
   headline: string;
@@ -62,6 +69,7 @@ export interface ProfileData {
   certificates: CertificateItem[];
   presentations: PresentationItem[];
   articles: ArticleItem[];
+  patents: PatentItem[];
   interests: string[];
 }
 
@@ -72,18 +80,19 @@ const profileData: ProfileData = {
   name: 'Bogdan Neterebskii',
   headline: 'Senior Software Engineer and Technical Leader',
   location: 'Belgrade, Serbia',
-  currentFocus: 'Building reliable software systems that connect physical products, data, and AI.',
+  currentFocus: 'Developing computational tooling for prefabricated construction at All3.',
   overview: [
-    `Senior software engineer with ${totalExperiencesYears} years of experience across backend, frontend, and ML projects.`,
+    `Senior Software Engineer and Technical Leader with ${totalExperiencesYears} years of experience across backend, frontend, and ML projects.`,
     'Comfortable switching between leadership and individual contributor roles after guiding a 25 person team for three years.',
     'Motivated by constant learning and pragmatic problem solving that keeps business goals in focus.',
     'Excited about research-heavy tasks, robotics, 3D printing, and AI-augmented workflows.'
   ],
   quickFacts: [
-    { label: 'Experience', value: `${totalExperiencesYears} years` },
-    { label: 'Leadership', value: '3 years' },
+    { label: 'Experience', value: `${totalExperiencesYears} years (including 3 years in leadership)` },
     { label: 'Current Role', value: 'Senior Software Developer @ All3' },
-    { label: 'Previous Focus', value: 'NEOM digital core at Nortal' }
+    { label: 'Scientific Publications', value: '4 articles and 1 patent' },
+    { label: 'Languages', value: 'English, Russian, Serbian (learning)' },
+    { label: 'Fun Fact', value: 'Was in the group that developed vaccine for COVID-19' }
   ],
   contacts: [
     { label: 'Email', value: 'bog2dan1@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
@@ -284,6 +293,14 @@ const profileData: ProfileData = {
       publication: 'National Institutes of Health',
       year: '2024',
       url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11003101/'
+    }
+  ],
+  patents: [
+    {
+      title: 'Influenza virus-based isolated recombinant virus',
+      number: 'WO2023287324A1',
+      year: '2023',
+      url: 'https://patents.google.com/patent/WO2023287324A1'
     }
   ],
   interests: ['Research tasks', 'Robotics', '3D printing', 'AI-assisted engineering']

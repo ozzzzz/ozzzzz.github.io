@@ -1,4 +1,4 @@
-import { Card, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Card, Group, List, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
 
 interface AboutBriefProps {
@@ -6,32 +6,39 @@ interface AboutBriefProps {
 }
 
 const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
-  const { name, headline, currentFocus, overview, quickFacts, contacts, experiences } = data
+  const { name, overview, quickFacts, contacts, experiences } = data
   const highlightedExperiences = experiences.slice(0, 3)
 
   return (
     <Stack gap="xl">
       <Card withBorder p="lg" radius="md">
-        <Stack gap="xs">
-          <Title order={2} c="pine.9">{name}</Title>
-          <Text size="lg" c="pine.7">{headline}</Text>
-          <Text c="pine.6">{currentFocus}</Text>
+        <Stack gap="sm">
+          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
+            Overview
+          </Text>
+          <Stack gap="sm">
+            {overview.map((item) => (
+              <Text key={item}>
+                {item}
+              </Text>
+            ))}
+          </Stack>
         </Stack>
       </Card>
 
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
         <Card withBorder p="lg" radius="md">
           <Stack gap="sm">
-            <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+            <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
               Quick Facts
             </Text>
             <Stack gap="sm">
               {quickFacts.map((fact) => (
                 <Stack key={fact.label} gap={0}>
-                  <Text size="sm" c="pine.5" tt="uppercase" fw={500}>
+                  <Text tt="uppercase" fw={500}>
                     {fact.label}
                   </Text>
-                  <Text fw={600} c="pine.9">{fact.value}</Text>
+                  <Text fw={600}>{fact.value}</Text>
                 </Stack>
               ))}
             </Stack>
@@ -40,13 +47,13 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
 
         <Card withBorder p="lg" radius="md">
           <Stack gap="sm">
-            <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+            <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
               Reach Out
             </Text>
             <Stack gap="xs">
               {contacts.map((contact) => (
-                <Text key={contact.href} c="pine.7">
-                  <Text component="span" fw={600} c="pine.9">
+                <Text key={contact.href}>
+                  <Text component="span" fw={600}>
                     {contact.label}
                   </Text>{' '}
                   · {contact.value}
@@ -57,23 +64,10 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
         </Card>
       </SimpleGrid>
 
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
-            Overview
-          </Text>
-          <Stack gap="sm">
-            {overview.map((item) => (
-              <Text key={item} c="pine.8">
-                {item}
-              </Text>
-            ))}
-          </Stack>
-        </Stack>
-      </Card>
+
 
       <Stack gap="md">
-        <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+        <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
           Recent Highlights
         </Text>
         <Stack gap="lg">
@@ -82,21 +76,21 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
               <Stack gap="sm">
                 <Group justify="space-between" align="flex-start">
                   <Stack gap={0}>
-                    <Text fw={600} c="pine.9">{experience.role}</Text>
-                    <Text c="pine.6">{experience.company}</Text>
+                    <Text fw={600}>{experience.role}</Text>
+                    <Text>{experience.company}</Text>
                   </Stack>
-                  <Text size="sm" c="pine.5">{experience.period}</Text>
+                  <Text>{experience.period}</Text>
                 </Group>
-                <Text size="sm" tt="uppercase" fw={500} c="pine.5">
+                <Text tt="uppercase" fw={500}>
                   {experience.location}
                 </Text>
-                <Text c="pine.7">{experience.summary}</Text>
+                <Text>{experience.summary}</Text>
               </Stack>
             </Card>
           ))}
         </Stack>
       </Stack>
-    </Stack>
+    </Stack >
   )
 }
 

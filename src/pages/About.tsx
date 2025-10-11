@@ -13,16 +13,17 @@ const About = () => {
     <Container size="lg" py="xl">
       <Stack gap="xl">
         <Stack gap="xs">
-          <Title order={1} c="pine.9">
+          <Title order={1}>
             About me
           </Title>
-          <Text size="lg" c="pine.6">
+          <Text>
             Toggle between a concise overview and the full CV-backed story of my work.
           </Text>
         </Stack>
 
         <SegmentedControl
           value={view}
+          size='md'
           onChange={(value) => setView(value as ViewMode)}
           data={[
             { label: 'Brief', value: 'brief' },
