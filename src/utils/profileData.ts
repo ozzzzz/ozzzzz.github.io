@@ -56,6 +56,7 @@ export interface ProfileData {
   overview: string[];
   quickFacts: QuickFact[];
   contacts: ContactLink[];
+  experienceYears: number;
   experiences: ExperienceItem[];
   education: EducationItem[];
   certificates: CertificateItem[];
@@ -89,6 +90,7 @@ const profileData: ProfileData = {
     { label: 'LinkedIn', value: 'bogdan-neterebskii', href: 'https://www.linkedin.com/in/bogdan-neterebskii/' },
     { label: 'GitHub', value: 'ozzzzz', href: 'https://github.com/ozzzzz' }
   ],
+  experienceYears: totalExperiencesYears,
   experiences: [
     {
       role: 'Senior Software Developer',

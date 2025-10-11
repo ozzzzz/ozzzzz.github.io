@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createTheme, MantineColorsTuple, MantineProvider } from '@mantine/core'
+import { Title, Text, createTheme, MantineColorsTuple, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
 import './main.css'
 import App from './App'
@@ -73,6 +73,18 @@ const theme = createTheme({
   defaultRadius: 'md',
   other: {
     logoFont: '"Dancing Script", cursive'
+  },
+  components: {
+    Title: Title.extend({
+      defaultProps: {
+        c: 'pine.9'
+      }
+    }),
+    Text: Text.extend({
+      defaultProps: {
+        c: 'pine.6'
+      }
+    })
   }
 })
 
