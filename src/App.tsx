@@ -1,29 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Container, Title } from '@mantine/core'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AppShell, useMantineTheme } from '@mantine/core'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
-function App() {
+const App = () => {
+  const theme = useMantineTheme()
+
   return (
-    <Router>
-      <Navigation>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={
-            <Container py={60}>
-              <Title order={1} ta="center">Projects - Coming Soon</Title>
-            </Container>
-          } />
-          <Route path="/contact" element={
-            <Container py={60}>
-              <Title order={1} ta="center">Contact - Coming Soon</Title>
-            </Container>
-          } />
-        </Routes>
-      </Navigation>
-    </Router>
+    <BrowserRouter>
+      <AppShell padding="md" header={{ height: 72 }} withBorder={false}>
+        <AppShell.Header>
+          <Navigation />
+        </AppShell.Header>
+
+        <AppShell.Main style={{ backgroundColor: theme.colors.sage[0], minHeight: '100vh' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AppShell.Main>
+      </AppShell>
+    </BrowserRouter>
   )
 }
 

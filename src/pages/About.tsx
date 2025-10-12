@@ -1,43 +1,39 @@
-import { Container, Title, Text, Stack, Paper } from '@mantine/core'
+import { useState } from 'react'
+import { Container, SegmentedControl, Stack, Text, Title } from '@mantine/core'
+import AboutBrief from '../components/AboutBrief'
+import AboutDetailed from '../components/AboutDetailed'
+import profileData from '../utils/profileData'
 
-function About() {
+type ViewMode = 'brief' | 'detailed'
+
+const About = () => {
+  const [view, setView] = useState<ViewMode>('brief')
+
   return (
-    <Container size="lg" py={60}>
-      <Stack spacing="xl">
-        <Title order={1} size="3rem" weight={600}>
-          About Me
-        </Title>
-
-        <Stack spacing="lg">
-          <Paper p="md" withBorder>
-            <Title order={3} size="lg" mb="sm">
-              Who I am
-            </Title>
-            <Text color="dimmed">
-              I'm a passionate developer who enjoys creating beautiful and functional web applications.
-              I love working with modern technologies and continuously learning new skills.
-            </Text>
-          </Paper>
-
-          <Paper p="md" withBorder>
-            <Title order={3} size="lg" mb="sm">
-              What I do
-            </Title>
-            <Text color="dimmed">
-              I specialize in full-stack web development, with expertise in React, Node.js, and modern web technologies.
-              I enjoy building user-friendly interfaces and solving complex problems.
-            </Text>
-          </Paper>
-
-          <Paper p="md" withBorder>
-            <Title order={3} size="lg" mb="sm">
-              Get in touch
-            </Title>
-            <Text color="dimmed">
-              Feel free to reach out if you'd like to collaborate or just want to say hello!
-            </Text>
-          </Paper>
+    <Container size="lg" py="xl">
+      <Stack gap="xl">
+        <Stack gap="xs">
+          <Title order={1}>
+            About me
+          </Title>
+          <Text>
+            Toggle between a concise overview and the full CV-backed story of my work.
+          </Text>
         </Stack>
+
+        <SegmentedControl
+          value={view}
+          size='md'
+          onChange={(value) => setView(value as ViewMode)}
+          data={[
+            { label: 'Brief', value: 'brief' },
+            { label: 'Detailed', value: 'detailed' }
+          ]}
+          radius="xl"
+          color="ember"
+        />
+
+        {view === 'brief' ? <AboutBrief data={profileData} /> : <AboutDetailed data={profileData} />}
       </Stack>
     </Container>
   )
