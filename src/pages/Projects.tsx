@@ -18,10 +18,10 @@ const projects: ProjectItem[] = [
 ]
 
 const statusColor: Record<ProjectItem['status'], string> = {
-  'In progress': 'ember',
-  'In research': 'pine',
-  'Exploring': 'sunrise',
-  'Completed': 'pine'
+  'In progress': 'primary',
+  'In research': 'accent',
+  'Exploring': 'secondary',
+  'Completed': 'accent'
 }
 
 const Projects = () => {
@@ -29,10 +29,10 @@ const Projects = () => {
     <Container size="lg" py="xl">
       <Stack gap="xl">
         <Stack gap="xs">
-          <Title order={1} c="pine.9">
+          <Title order={1} c="accent.9">
             Projects
           </Title>
-          <Text size="lg" c="pine.6">
+          <Text size="lg" c="accent.6">
             My side projects and research explorations. Will be updated soon.
           </Text>
         </Stack>
@@ -42,17 +42,17 @@ const Projects = () => {
             <Card key={project.title} withBorder p="lg" radius="md" shadow="sm">
               <Stack gap="sm">
                 <Group justify="space-between" align="baseline">
-                  <Title order={3} size="1.25rem" c="pine.9">
+                  <Title order={3} size="1.25rem" c="accent.9">
                     {project.title}
                   </Title>
                   <Badge color={statusColor[project.status]} variant="light" radius="xl">
                     {project.status}
                   </Badge>
                 </Group>
-                <Text size="sm" c="pine.5">
+                <Text size="sm" c="accent.5">
                   {project.timeframe}
                 </Text>
-                <Text c="pine.7">{project.description}</Text>
+                <Text c="accent.7">{project.description}</Text>
               </Stack>
             </Card>
           ))}

@@ -16,7 +16,7 @@ const App = () => {
           <Navigation />
         </AppShell.Header>
 
-        <AppShell.Main style={{ backgroundColor: theme.colors.sage[0], minHeight: '100vh' }}>
+        <AppShell.Main style={{ backgroundColor: theme.colors.lightAccent[0], minHeight: '100vh' }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

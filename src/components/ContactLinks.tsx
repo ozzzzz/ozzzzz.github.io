@@ -17,7 +17,7 @@ const ContactLinks = ({ contacts }: ContactLinksProps) => {
           target="_blank"
           rel="noreferrer"
           variant={index === 0 ? 'filled' : 'light'}
-          color={index === 0 ? 'ember' : 'pine'}
+          color={index === 0 ? 'primary' : 'accent'}
           radius="xl"
         >
           {contact.label}

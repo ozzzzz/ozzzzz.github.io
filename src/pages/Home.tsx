@@ -17,20 +17,20 @@ const Home = () => {
               <Text>
                 A senior software engineer and technical leader with {profileData.experienceYears} years of experience with motto:
               </Text>
-              <Blockquote bg="pine.1" fs="italic" c="pine.9">
+              <Blockquote bg="accent.1" fs="italic" c="accent.9">
                 “My goal is to make the team more efficient and the work smoother when I’m around than when I’m not.”
               </Blockquote>
             </Stack>
             <Stack>
               <Text>
-                Passionate about building solutions that either make people’s lives easier and healthier, or reduce environmental impact. Click <Button component={Link} to="/about" color="pine" variant='light' radius="xl" size='xs' >
+                Passionate about building solutions that either make people’s lives easier and healthier, or reduce environmental impact. Click <Button component={Link} to="/about" color="accent" variant='light' radius="xl" size='xs' >
                   About me
                 </Button> if you want to read how I did that in my career so far.
               </Text>
             </Stack>
             <Stack>
               <Text>
-                Open to new opportunities and collaborations if they are <Text span c="ember" fs="italic">fun</Text> enough. Click <Button component={Link} to="/contact" radius="xl" color="pine" variant='light' size='xs'>Contact</Button> to make some cool stuff together or just meet if you wanna to get in touch.
+                Open to new opportunities and collaborations if they are <Text span c="primary" fs="italic">fun</Text> enough. Click <Button component={Link} to="/contact" radius="xl" color="accent" variant='light' size='xs'>Contact</Button> to make some cool stuff together or just meet if you wanna to get in touch.
               </Text>
             </Stack>
 

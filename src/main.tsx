@@ -8,67 +8,68 @@ import App from './App'
 const rootElement = document.getElementById('root')
 if (!rootElement) throw new Error('Root element not found')
 
-const emberColors: MantineColorsTuple = [
-  '#FFF4EC',
-  '#FFE3D3',
-  '#FFC9AC',
-  '#FFAD83',
-  '#FF935B',
-  '#F77736',
-  '#BB3E00',
-  '#9F3500',
-  '#832B00',
-  '#651F00'
+const primaryColors: MantineColorsTuple = [
+  "#fff1eb",
+  "#fae1d4",
+  "#f9bfa2",
+  "#f99a6c",
+  "#f97c3f",
+  "#fa6924",
+  "#fa5f18",
+  "#df4f0d",
+  "#c74508",
+  "#bb3e00"
 ]
 
-const sunriseColors: MantineColorsTuple = [
-  '#FFF6E8',
-  '#FFE8C7',
-  '#FFD4A0',
-  '#FFC072',
-  '#FFAC44',
-  '#F7AD45',
-  '#D98B1A',
-  '#B26C11',
-  '#8B4E0A',
-  '#5C3204'
+const secondaryColors: MantineColorsTuple = [
+  "#fff6e0",
+  "#ffebcc",
+  "#fcd59d",
+  "#f9be69",
+  "#f7ad45",
+  "#f59d21",
+  "#f59710",
+  "#da8301",
+  "#c37300",
+  "#aa6200"
 ]
 
-const pineColors: MantineColorsTuple = [
-  '#EEF4F0',
-  '#DCE5DF',
-  '#C7D4CA',
-  '#B0C2B4',
-  '#99AF9F',
-  '#829B88',
-  '#657C6A',
-  '#516257',
-  '#3E4942',
-  '#28312B'
+const accentColors: MantineColorsTuple = [
+  "#eef8f0",
+  "#e3eae5",
+  "#c8d2ca",
+  "#abb9ae",
+  "#92a496",
+  "#829786",
+  "#78907e",
+  "#657c6a",
+  "#59705e",
+  "#48614e"
 ]
 
-const sageColors: MantineColorsTuple = [
-  '#F3F7F4',
-  '#E3EDE5',
-  '#D4E2D6',
-  '#C3D6C6',
-  '#B0C9B4',
-  '#A2B9A7',
-  '#8CA492',
-  '#74897A',
-  '#5B6D61',
-  '#415147'
+const lightAccentColors: MantineColorsTuple = [
+  "#ecf9ef",
+  "#e1ece3",
+  "#c5d5c9",
+  "#a2b9a7",
+  "#8da893",
+  "#7c9c83",
+  "#73957a",
+  "#608268",
+  "#54745b",
+  "#44654b"
 ]
+
 
 const theme = createTheme({
   colors: {
-    ember: emberColors,
-    sunrise: sunriseColors,
-    pine: pineColors,
-    sage: sageColors
+    primary: primaryColors,
+    secondary: secondaryColors,
+    accent: accentColors,
+    lightAccent: lightAccentColors
   },
-  primaryColor: 'ember',
-  primaryShade: 6,
+  primaryColor: 'primary',
+  primaryShade: 9,
   fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   defaultRadius: 'md',
   other: {
@@ -77,18 +78,18 @@ const theme = createTheme({
   components: {
     Title: Title.extend({
       defaultProps: {
-        c: 'pine.9'
+        c: 'accent'
       }
     }),
     Text: Text.extend({
       defaultProps: {
-        c: 'pine.6',
+        c: 'accent',
         size: 'lg',
       }
     }),
     TextSelected: Text.extend({
       defaultProps: {
-        c: 'ember',
+        c: 'primary',
         size: 'lg',
       }
     })

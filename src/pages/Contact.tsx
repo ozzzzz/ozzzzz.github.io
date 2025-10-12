@@ -22,14 +22,14 @@ const Contact = () => {
         <Grid.Col span={{ base: 12, md: 8 }}>
           <Stack gap="xl">
             <Stack gap="xs">
-              <Title order={1} c="pine.9">
+              <Title order={1} c="accent.9">
                 Contacts
               </Title>
             </Stack>
 
             <Card withBorder p="lg" radius="md">
               <Stack gap="sm">
-                <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+                <Text size="sm" tt="uppercase" fw={600} c="accent.5" style={{ letterSpacing: '0.2em' }}>
                   Online
                 </Text>
                 <ContactLinks contacts={contacts} />
@@ -38,10 +38,10 @@ const Contact = () => {
 
             <Card withBorder p="lg" radius="md">
               <Stack gap="sm">
-                <Text size="sm" tt="uppercase" fw={600} c="pine.5" style={{ letterSpacing: '0.2em' }}>
+                <Text size="sm" tt="uppercase" fw={600} c="accent.5" style={{ letterSpacing: '0.2em' }}>
                   Offline
                 </Text>
-                <Text size="md" c="pine.7">
+                <Text size="md" c="accent.7">
                   Somewhere near {location}
                 </Text>
               </Stack>
