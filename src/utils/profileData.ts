@@ -48,6 +48,11 @@ export interface ArticleItem {
   url?: string;
 }
 
+export interface PrincipleItem {
+  title: string;
+  description: string;
+}
+
 export interface PatentItem {
   title: string;
   number: string;
@@ -69,6 +74,7 @@ export interface ProfileData {
   certificates: CertificateItem[];
   presentations: PresentationItem[];
   articles: ArticleItem[];
+  principles: PrincipleItem[];
   patents: PatentItem[];
   interests: string[];
 }
@@ -293,6 +299,37 @@ const profileData: ProfileData = {
       publication: 'National Institutes of Health',
       year: '2024',
       url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11003101/'
+    }
+  ],
+  principles: [
+    {
+      title: 'Do something valuable',
+      description:
+        'Either make people’s lives easier and healthier, or reduce environmental impact. No gambling, high-frequency trading or anything else that feels to me wrong.'
+    },
+    {
+      title: 'Transparency first',
+      description:
+        'C4 models and Mermaid diagrams are must-haves for a clear system overview, with Confluence pages, solid READMEs, and how-to blocks maintaining shared context.'
+    },
+    {
+      title: 'Focus on the result',
+      description: 'Keep outcomes visible, measure impact, and change course when the value is not there.'
+    },
+    {
+      title: 'Default tech stack mindset',
+      description:
+        'Start with proven tools and borrowed best practices, yet stay open to new solutions when they bring measurable value.'
+    },
+    {
+      title: 'Respect time',
+      description:
+        'Prefer deeper thinking and written pre-mortems over extra meetings; flag risks before large discussions.'
+    },
+    {
+      title: 'Responsible AI usage',
+      description:
+        'Let AI handle routine work, but review every line, understand its limits, and step in manually whenever needed.'
     }
   ],
   patents: [

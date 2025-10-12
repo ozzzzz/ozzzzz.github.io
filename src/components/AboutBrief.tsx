@@ -1,4 +1,4 @@
-import { Card, Group, List, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Card, Group, SimpleGrid, Stack, Text } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
 
 interface AboutBriefProps {
@@ -6,7 +6,7 @@ interface AboutBriefProps {
 }
 
 const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
-  const { name, overview, quickFacts, contacts, experiences } = data
+  const { overview, quickFacts, contacts, experiences, principles } = data
   const highlightedExperiences = experiences.slice(0, 3)
 
   return (
@@ -64,6 +64,22 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
         </Card>
       </SimpleGrid>
 
+      <Card withBorder p="lg" radius="md">
+        <Stack gap="sm">
+          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
+            Principles
+          </Text>
+          <Stack gap="sm">
+            {principles.map((principle) => (
+              <Stack key={principle.title} gap={4}>
+                <Text fw={600}>{principle.title}</Text>
+                <Text>{principle.description}</Text>
+              </Stack>
+            ))}
+          </Stack>
+        </Stack>
+      </Card>
+
 
 
       <Stack gap="md">
@@ -90,7 +106,7 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
           ))}
         </Stack>
       </Stack>
-    </Stack >
+    </Stack>
   )
 }
 

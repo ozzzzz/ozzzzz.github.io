@@ -6,7 +6,7 @@ interface AboutDetailedProps {
 }
 
 const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
-  const { experiences, education, certificates, presentations, articles, patents, interests } = data
+  const { experiences, principles, education, certificates, presentations, articles, patents, interests } = data
 
   return (
     <Stack gap="xl">
@@ -54,6 +54,22 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
           ))}
         </Accordion>
       </Stack>
+
+      <Card withBorder p="lg" radius="md">
+        <Stack gap="sm">
+          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
+            Principles
+          </Text>
+          <Stack gap="sm">
+            {principles.map((principle) => (
+              <Stack key={principle.title} gap={4}>
+                <Text fw={600}>{principle.title}</Text>
+                <Text>{principle.description}</Text>
+              </Stack>
+            ))}
+          </Stack>
+        </Stack>
+      </Card>
 
       <Card withBorder p="lg" radius="md">
         <Stack gap="sm">

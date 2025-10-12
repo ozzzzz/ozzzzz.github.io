@@ -26,3 +26,10 @@ npm run build   # production bundle (used by GitHub Pages)
 ```
 
 Deployments are handled via the GitHub Actions workflow in `.github/workflows/deploy.yml`.
+
+## TODO
+- Add proper color scheme without explicit colors in the codebase
+- Add "funny" images to the photos
+- Add more projects
+- Update favicon
+- Add links to the articles, patents, and other mentions

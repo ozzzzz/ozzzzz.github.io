@@ -6,7 +6,7 @@ const links = [
   { label: 'Home', to: '/' },
   { label: 'About me', to: '/about' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Contacts', to: '/contact' }
+  { label: 'Contact', to: '/contact' }
 ]
 
 const Navigation = () => {
