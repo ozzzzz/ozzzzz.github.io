@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { AppShell, useMantineTheme } from '@mantine/core'
+import { AppShell } from '@mantine/core'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,14 +7,11 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 
 const App = () => {
-  const theme = useMantineTheme()
 
   return (
     <BrowserRouter>
-      <AppShell padding="md" header={{ height: 72 }} withBorder={false}>
-        <AppShell.Header>
-          <Navigation />
-        </AppShell.Header>
+      <AppShell padding="md" withBorder={false}>
+        <Navigation />
 
         <AppShell.Main style={{ minHeight: '100vh' }}>
           <Routes>

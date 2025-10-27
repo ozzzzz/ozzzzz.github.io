@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Title, Text, createTheme, MantineColorsTuple, MantineProvider } from '@mantine/core'
+import { Title, Text, createTheme, MantineColorsTuple, MantineProvider, Anchor } from '@mantine/core'
 import '@mantine/core/styles.css'
 import './main.css'
 import App from './App'
@@ -37,7 +37,14 @@ const theme = createTheme({
       defaultProps: {
         size: 'lg',
       }
-    })
+    }),
+    Anchor: Anchor.extend({
+      defaultProps: {
+        td: "underline",
+        fw: 700,
+        c: 'mainColor.9',
+      }
+    }),
   }
 })
 

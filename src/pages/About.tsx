@@ -13,7 +13,7 @@ const About = () => {
     <Container size="lg" py="xl">
       <Stack gap="xl">
         <Stack gap="xs">
-          <Title order={1}>
+          <Title order={3}>
             About me
           </Title>
           <Text>

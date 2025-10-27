@@ -22,7 +22,7 @@ const Contact = () => {
         <Grid.Col span={{ base: 12, md: 8 }}>
           <Stack gap="xl">
             <Stack gap="xs">
-              <Title order={1}>
+              <Title order={3}>
                 Contacts
               </Title>
             </Stack>

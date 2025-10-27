@@ -29,7 +29,7 @@ const Projects = () => {
     <Container size="lg" py="xl">
       <Stack gap="xl">
         <Stack gap="xs">
-          <Title order={1}>
+          <Title order={3}>
             Projects
           </Title>
           <Text size="lg">

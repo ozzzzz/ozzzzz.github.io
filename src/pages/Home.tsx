@@ -1,4 +1,4 @@
-import { Blockquote, Button, Container, Grid, Group, Image, Stack, Text, Title } from '@mantine/core'
+import { Anchor, Blockquote, Container, Grid, Image, Stack, Text, Title } from '@mantine/core'
 import { Link } from 'react-router-dom'
 import bogdanPhoto from '../assets/bogdan_photo_4.jpeg'
 import profileData from '../utils/profileData'
@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <Container size="lg" py="xl">
       <Grid gutter="xl" align="stretch">
-        <Grid.Col span={{ base: 12, md: 7 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <Stack gap="lg" align="flex-start">
             <Stack gap="lg">
-              <Title order={1}>
-                Hey, I am Bogdan Neterebskii
+              <Title order={3}>
+                Hey, I am Bogdan
               </Title>
               <Text>
                 A senior software engineer and technical leader with {profileData.experienceYears} years of experience with motto:
@@ -23,21 +23,19 @@ const Home = () => {
             </Stack>
             <Stack>
               <Text>
-                Passionate about building solutions that either make people's lives easier and healthier, or reduce environmental impact. Click <Button component={Link} to="/about" variant='light' radius="xl" size='xs' >
-                  About me
-                </Button> if you want to read how I did that in my career so far.
+                Passionate about building solutions that either make people's lives easier and healthier, or reduce environmental impact. Click <Anchor component={Link} to="/about">About me</Anchor> if you want to read how I did that in my career so far.
               </Text>
             </Stack>
             <Stack>
               <Text>
-                Open to new opportunities and collaborations if they are fun enough. Click <Button component={Link} to="/contact" radius="xl" variant='light' size='xs'>Contact</Button> to make some cool stuff together or just meet if you wanna to get in touch.
+                Open to new opportunities and collaborations if they are fun enough. Click <Anchor component={Link} to="/contact">Contact</Anchor> to make some cool stuff together or just meet if you wanna to get in touch.
               </Text>
             </Stack>
 
           </Stack>
         </Grid.Col>
 
-        <Grid.Col span={{ base: 12, md: 5 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
           <Image
             src={bogdanPhoto}
             alt="Bogdan Neterebskii"
