@@ -1,6 +1,7 @@
-import { Burger, Button, Container, Drawer, Group, Stack, Text, useMantineTheme } from '@mantine/core'
+import { Avatar, Burger, Container, Drawer, Group, Stack, Text, useMantineTheme } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { NavLink, useLocation } from 'react-router-dom'
+import bogdanPhoto from '../assets/bogdan_photo_4.jpeg'
 
 const links = [
   { label: 'Home', to: '/' },
@@ -24,53 +25,57 @@ const Navigation = () => {
 
   return (
     <>
-      <Container size="lg" px="md" h="100%">
-        <Group justify="space-between" align="center" h="100%">
-          <Text
-            component={NavLink}
-            to="/"
-            fw={800}
-            size="lg"
-            style={{
-              textDecoration: 'none',
-              color: theme.colors.mainColor[9],
-              fontFamily: theme.other.logoFont,
-              fontWeight: 800,
-              fontSize: '2.5rem',
-              lineHeight: 1.1
-            }}
-            onClick={close}
-          >
-            Bogdan Has Fun
-          </Text>
+      <Container size="lg" px="md" h="100%" py="md">
+        <Stack gap="sm">
+          <Group gap="md" align="center">
 
-          <Group gap="xs" visibleFrom="sm">
+            <Text
+              component={NavLink}
+              to="/"
+              fw={700}
+              size="xl"
+              style={{
+                textDecoration: 'none',
+                color: theme.colors.mainColor[9]
+              }}
+              onClick={close}
+            >
+              Bogdan Neterebskii
+            </Text>
+          </Group>
+
+          <Group gap="xl" visibleFrom="sm" >
             {links.map((link) => {
               const active = isActive(link.to)
 
               return (
-                <Button
+                <Text
                   key={link.to}
                   component={NavLink}
                   to={link.to}
-                  variant={active ? 'filled' : 'light'}
-                  radius="xl"
+                  size="sm"
+                  c={active ? theme.colors.mainColor[9] : theme.colors.mainColor[4]}
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: 500,
+                  }}
                   onClick={close}
                 >
                   {link.label}
-                </Button>
+                </Text>
               )
             })}
           </Group>
+        </Stack>
 
-          <Burger
-            hiddenFrom="sm"
-            opened={opened}
-            onClick={toggle}
-            aria-label="Toggle navigation"
-            size="sm"
-          />
-        </Group>
+        <Burger
+          hiddenFrom="sm"
+          opened={opened}
+          onClick={toggle}
+          aria-label="Toggle navigation"
+          size="sm"
+          style={{ position: 'absolute', top: '1rem', right: '1rem' }}
+        />
       </Container>
 
       <Drawer
@@ -85,18 +90,20 @@ const Navigation = () => {
             const active = isActive(link.to)
 
             return (
-              <Button
+              <Text
                 key={link.to}
                 component={NavLink}
                 to={link.to}
-                variant={active ? 'filled' : 'light'}
-                size="md"
-                radius="md"
-                fullWidth
+                size="lg"
+                c={active ? theme.colors.mainColor[9] : theme.colors.mainColor[4]}
+                style={{
+                  textTransform: 'uppercase',
+                  fontWeight: 500,
+                }}
                 onClick={close}
               >
                 {link.label}
-              </Button>
+              </Text>
             )
           })}
         </Stack>
