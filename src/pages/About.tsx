@@ -30,7 +30,7 @@ const About = () => {
             { label: 'Detailed', value: 'detailed' }
           ]}
           radius="xl"
-          color="ember"
+          color="primary"
         />
 
         {view === 'brief' ? <AboutBrief data={profileData} /> : <AboutDetailed data={profileData} />}

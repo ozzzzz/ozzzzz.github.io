@@ -33,7 +33,7 @@ const Navigation = () => {
             size="lg"
             style={{
               textDecoration: 'none',
-              color: theme.colors.ember[6],
+              color: theme.colors.primary[9],
               fontFamily: theme.other.logoFont,
               fontWeight: 800,
               fontSize: '2.5rem',
@@ -54,7 +54,7 @@ const Navigation = () => {
                   component={NavLink}
                   to={link.to}
                   variant={active ? 'filled' : 'light'}
-                  color={active ? 'ember' : 'pine'}
+                  color={active ? 'primary' : 'accent'}
                   radius="xl"
                   onClick={close}
                 >
@@ -69,7 +69,7 @@ const Navigation = () => {
             opened={opened}
             onClick={toggle}
             aria-label="Toggle navigation"
-            color={theme.colors.ember[6]}
+            color="primary"
             size="sm"
           />
         </Group>
@@ -81,8 +81,8 @@ const Navigation = () => {
         size="100%"
         padding="md"
         hiddenFrom="sm"
-        overlayProps={{ color: theme.colors.pine[8], opacity: 0.35 }}
-        styles={{ content: { backgroundColor: theme.colors.sage[0] } }}
+        overlayProps={{ color: theme.colors.accent[8], opacity: 0.35 }}
+        styles={{ content: { backgroundColor: theme.colors.lightAccent[0] } }}
       >
         <Stack gap="md" mt="lg">
           {links.map((link) => {
@@ -94,7 +94,7 @@ const Navigation = () => {
                 component={NavLink}
                 to={link.to}
                 variant={active ? 'filled' : 'light'}
-                color={active ? 'ember' : 'pine'}
+                color={active ? 'primary' : 'accent'}
                 size="md"
                 radius="md"
                 fullWidth

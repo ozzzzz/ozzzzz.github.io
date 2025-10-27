@@ -27,6 +27,13 @@ npm run build   # production bundle (used by GitHub Pages)
 
 Deployments are handled via the GitHub Actions workflow in `.github/workflows/deploy.yml`.
 
+### Color scheme
+#BB3E00 - primary
+#F7AD45 - secondary
+#657C6A - accent
+#A2B9A7 - light accent
+#F9FAFB - light background
+
 ## TODO
 - Add proper color scheme without explicit colors in the codebase
 - Add "funny" images to the photos

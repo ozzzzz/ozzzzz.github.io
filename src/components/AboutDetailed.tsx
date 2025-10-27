@@ -34,7 +34,7 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
                   {experience.technologies.length > 0 && (
                     <Group gap="xs">
                       {experience.technologies.map((tech) => (
-                        <Badge key={tech} color="sage" variant="light" radius="sm">
+                        <Badge key={tech} color="lightAccent" variant="light" radius="sm">
                           {tech}
                         </Badge>
                       ))}
@@ -168,7 +168,7 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
           </Text>
           <Group gap="xs">
             {interests.map((interest) => (
-              <Badge key={interest} color="sunrise" variant="light" radius="xl">
+              <Badge key={interest} color="secondary" variant="light" radius="xl">
                 {interest}
               </Badge>
             ))}
