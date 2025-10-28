@@ -8,7 +8,7 @@ interface DefaultPageProps {
 
 const DefaultPage = ({ title, children }: DefaultPageProps) => {
     return (
-        <Container size="lg" py="xl">
+        <Container size="lg" py="md">
             <Title order={3} mb="xl">{title}</Title>
             {children}
         </Container>
