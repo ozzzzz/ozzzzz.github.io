@@ -67,7 +67,7 @@ export interface ProfileData {
   currentFocus: string;
   overview: string[];
   quickFacts: QuickFact[];
-  contacts: ContactLink[];
+  contacts: Record<string, ContactLink>;
   experienceYears: number;
   experiences: ExperienceItem[];
   education: EducationItem[];
@@ -100,11 +100,11 @@ const profileData: ProfileData = {
     { label: 'Languages', value: 'English, Russian, Serbian (learning)' },
     { label: 'Fun Fact', value: 'Was in the group that developed vaccine for COVID-19' }
   ],
-  contacts: [
-    { label: 'Email', value: 'bog2dan1@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
-    { label: 'LinkedIn', value: 'bogdan-neterebskii', href: 'https://www.linkedin.com/in/bogdan-neterebskii/' },
-    { label: 'GitHub', value: 'ozzzzz', href: 'https://github.com/ozzzzz' }
-  ],
+  contacts: {
+    email: { label: 'Email', value: 'bog2dan1@gmail.com', href: 'mailto:bog2dan1@gmail.com' },
+    linkedin: { label: 'LinkedIn', value: 'bogdan-neterebskii', href: 'https://www.linkedin.com/in/bogdan-neterebskii/' },
+    github: { label: 'GitHub', value: 'ozzzzz', href: 'https://github.com/ozzzzz' }
+  },
   experienceYears: totalExperiencesYears,
   experiences: [
     {

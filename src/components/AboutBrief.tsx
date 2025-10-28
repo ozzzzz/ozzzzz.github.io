@@ -45,7 +45,7 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
           </Stack>
         </Card>
 
-        <Card withBorder p="lg" radius="md">
+        {/* <Card withBorder p="lg" radius="md">
           <Stack gap="sm">
             <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
               Reach Out
@@ -61,7 +61,7 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
               ))}
             </Stack>
           </Stack>
-        </Card>
+        </Card> */}
       </SimpleGrid>
 
       <Card withBorder p="lg" radius="md">
