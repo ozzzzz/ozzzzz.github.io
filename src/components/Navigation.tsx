@@ -45,7 +45,7 @@ const Navigation = () => {
           </Group>
 
           <Group gap="xl" visibleFrom="sm" >
-            {links.map((link) => {
+            {links.filter(link => link.to !== '/').map((link) => {
               const active = isActive(link.to)
 
               return (
