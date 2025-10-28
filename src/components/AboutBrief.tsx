@@ -1,5 +1,6 @@
 import { Card, Group, SimpleGrid, Stack, Text } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
+import Paragraph from './Paragraph'
 
 interface AboutBriefProps {
   data?: ProfileData
@@ -9,7 +10,14 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
   const { overview, quickFacts, contacts, experiences, principles } = data
   const highlightedExperiences = experiences.slice(0, 3)
 
-  return (
+  return (<>
+    <Paragraph title='Overview'>
+      {overview.map((item) => (
+        <Text key={item}>
+          {item}
+        </Text>
+      ))}
+    </Paragraph>
     <Stack gap="xl">
       <Card withBorder p="lg" radius="md">
         <Stack gap="sm">
@@ -107,6 +115,7 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
         </Stack>
       </Stack>
     </Stack>
+  </>
   )
 }
 

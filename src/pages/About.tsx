@@ -3,6 +3,7 @@ import { Container, SegmentedControl, Stack, Text, Title } from '@mantine/core'
 import AboutBrief from '../components/AboutBrief'
 import AboutDetailed from '../components/AboutDetailed'
 import profileData from '../utils/profileData'
+import DefaultPage from '../components/DefaultPage'
 
 type ViewMode = 'brief' | 'detailed'
 
@@ -10,16 +11,12 @@ const About = () => {
   const [view, setView] = useState<ViewMode>('brief')
 
   return (
-    <Container size="lg" py="xl">
+    <DefaultPage title='About me'>
+
       <Stack gap="xl">
-        <Stack gap="xs">
-          <Title order={3}>
-            About me
-          </Title>
-          <Text>
-            Toggle between a concise overview and the full CV-backed story of my work.
-          </Text>
-        </Stack>
+        <Text>
+          Toggle between a concise overview and the full CV-backed story of my work.
+        </Text>
 
         <SegmentedControl
           value={view}
@@ -35,7 +32,8 @@ const About = () => {
 
         {view === 'brief' ? <AboutBrief data={profileData} /> : <AboutDetailed data={profileData} />}
       </Stack>
-    </Container>
+
+    </DefaultPage>
   )
 }
 
