@@ -1,4 +1,4 @@
-import { SimpleGrid, Stack, Text } from '@mantine/core'
+import { SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
 import Paragraph from './Paragraph'
 
@@ -13,7 +13,7 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
     <Paragraph title='OVERVIEW'>
       {overview.map((item) => (
         <Text key={item}>
-          {item}
+          • {item}
         </Text>
       ))}
     </Paragraph>
@@ -22,8 +22,8 @@ const AboutBrief = ({ data = profileData }: AboutBriefProps) => {
         <Stack gap={"xl"}>
           {principles.map((principle) => (
             <Stack key={principle.title} gap={'xs'}>
-              <b>{principle.title}</b>
-              {principle.description}
+              <Title order={5}>{principle.title}</Title>
+              <Text>{principle.description}</Text>
             </Stack>
           ))}
         </Stack>

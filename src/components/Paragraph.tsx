@@ -1,5 +1,6 @@
 import React from 'react';
-import { Anchor, Stack, Title } from '@mantine/core';
+import { Stack, Title, useMantineTheme } from '@mantine/core';
+import Link from './Link';
 
 interface ParagraphProps {
     title: string,
@@ -9,12 +10,13 @@ interface ParagraphProps {
 }
 
 const Paragraph = ({ title, children, link, linkText }: ParagraphProps) => {
+    const theme = useMantineTheme();
     return (
         <Stack gap="xs">
-            <Title order={4} >{title}</Title>
+            <Title order={4} tt="uppercase" fw={600} style={{ letterSpacing: '0.25em', color: theme.colors.mainColor[7] }} >{title}</Title>
             {children}
-            {link && linkText && <Anchor fz="sm" fw={300} href={link} target="_blank" rel="noopener noreferrer">{linkText}</Anchor>}
-        </Stack>
+            {link && linkText && <Link text={linkText} url={link} />}
+        </Stack >
     )
 }
 
