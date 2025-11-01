@@ -60,6 +60,11 @@ export interface PatentItem {
   url?: string;
 }
 
+export interface TechStackItem {
+  name: string;
+  technologies: string[];
+}
+
 export interface ProfileData {
   name: string;
   headline: string;
@@ -76,6 +81,7 @@ export interface ProfileData {
   articles: ArticleItem[];
   principles: PrincipleItem[];
   patents: PatentItem[];
+  techStack: TechStackItem[];
   interests: string[];
 }
 
@@ -340,7 +346,16 @@ const profileData: ProfileData = {
       url: 'https://patents.google.com/patent/WO2023287324A1'
     }
   ],
-  interests: ['Research tasks', 'Robotics', '3D printing', 'AI-assisted engineering']
+  interests: ['Research tasks', 'Robotics', '3D printing', 'AI-assisted engineering'],
+  techStack: [
+    { name: 'Backend', technologies: ['Python', 'Haskell', 'Java', 'Scala', 'Julia'] },
+    { name: 'Frontend', technologies: ['React', 'Next.js', 'JavaScript', 'TypeScript'] },
+    { name: 'DevOps', technologies: ['Docker', 'Kubernetes', 'GitLab CI/CD'] },
+    { name: 'Databases', technologies: ['PostgreSQL', 'MongoDB', 'Neo4j', 'MySQL'] },
+    { name: 'Brokers', technologies: ['RabbitMQ', 'Kafka', 'ZeroMQ'] },
+    { name: 'Tools & Platforms', technologies: ['RFEM6', 'Grasshopper', 'Rhino', 'NSIS', 'OnShape'] },
+    { name: "Security", technologies: ['Keycloak', 'GDPR Compliance'] },
+  ]
 }
 
 export default profileData
