@@ -1,4 +1,5 @@
 import { Badge, Card, Container, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import DefaultPage from '../components/DefaultPage';
 
 interface ProjectItem {
   title: string;
@@ -26,16 +27,11 @@ const statusColor: Record<ProjectItem['status'], string> = {
 
 const Projects = () => {
   return (
-    <Container size="lg" py="xl">
+    <DefaultPage title='Projects'>
       <Stack gap="xl">
-        <Stack gap="xs">
-          <Title order={3}>
-            Projects
-          </Title>
-          <Text size="lg">
-            My side projects and research explorations. Will be updated soon.
-          </Text>
-        </Stack>
+        <Text>
+          My side projects and research explorations. Will be updated soon.
+        </Text>
 
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
           {projects.map((project) => (
@@ -58,7 +54,7 @@ const Projects = () => {
           ))}
         </SimpleGrid>
       </Stack>
-    </Container>
+    </DefaultPage>
   )
 }
 

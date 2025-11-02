@@ -35,7 +35,7 @@ const theme = createTheme({
   components: {
     Text: Text.extend({
       defaultProps: {
-        size: 'lg',
+        size: 'md',
       }
     }),
     Anchor: Anchor.extend({

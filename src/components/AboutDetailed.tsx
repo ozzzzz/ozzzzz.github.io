@@ -1,5 +1,7 @@
-import { Accordion, Badge, Card, Group, Stack, Text, Title } from '@mantine/core'
+import { Accordion, Anchor, Badge, Card, Group, Stack, Text, Title } from '@mantine/core'
 import profileData, { ProfileData } from '../utils/profileData'
+import Paragraph from './Paragraph'
+import Link from './Link'
 
 interface AboutDetailedProps {
   data?: ProfileData
@@ -10,11 +12,8 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
 
   return (
     <Stack gap="xl">
-      <Stack gap="md">
-        <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-          Experience
-        </Text>
-        <Accordion variant="contained" radius="md" multiple>
+      <Paragraph title="EXPERIENCE">
+        <Accordion variant="contained" radius="md" multiple mt="md">
           {experiences.map((experience, index) => (
             <Accordion.Item value={`${experience.company}-${experience.period}-${index}`} key={`${experience.company}-${experience.period}-${index}`}>
               <Accordion.Control>
@@ -23,7 +22,7 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
                     <Title order={4}>{experience.role}</Title>
                     <Text>{experience.company}</Text>
                   </Stack>
-                  <Stack gap={0} align="flex-end">
+                  <Stack gap={0} align="flex-end" mr='xs'>
                     <Text>{experience.period}</Text>
                     <Text>{experience.location}</Text>
                   </Stack>
@@ -53,129 +52,56 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
             </Accordion.Item>
           ))}
         </Accordion>
-      </Stack>
+      </Paragraph>
 
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Principles
-          </Text>
-          <Stack gap="sm">
-            {principles.map((principle) => (
-              <Stack key={principle.title} gap={4}>
-                <Text fw={600}>{principle.title}</Text>
-                <Text>{principle.description}</Text>
-              </Stack>
-            ))}
-          </Stack>
+      <Paragraph title='PRINCIPLES' >
+        <Stack gap="md">
+          {principles.map((principle) => (
+            <Stack key={principle.title} gap={0}>
+              <Title order={5}>{principle.title}</Title>
+              <Text>{principle.description}</Text>
+            </Stack>
+          ))}
         </Stack>
-      </Card>
+      </Paragraph>
 
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Education
-          </Text>
-          <Stack gap="md">
-            {education.map((entry) => (
-              <Stack key={entry.degree} gap={4}>
-                <Title order={5}>{entry.degree}</Title>
-                <Text>{entry.institution}</Text>
-                <Text>{entry.period}</Text>
-                <Text>{entry.details}</Text>
-              </Stack>
-            ))}
-          </Stack>
+      <Paragraph title='EDUCATION'>
+        <Stack gap="md">
+          {education.map((entry) => (
+            <Stack key={entry.degree} gap="0">
+              <Title order={5}>{entry.degree}</Title>
+              <Text>{entry.institution}</Text>
+              <Text>{entry.period}</Text>
+              <Text>{entry.details}</Text>
+            </Stack>
+          ))}
         </Stack>
-      </Card>
+      </Paragraph>
 
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Certificates
-          </Text>
-          <Stack gap="xs">
-            {certificates.map((certificate) => (
-              <Text key={certificate.title}>
-                <Text component="span" fw={600}>
-                  {certificate.title}
-                </Text>{' '}
-                — {certificate.provider} ({certificate.year})
-              </Text>
-            ))}
-          </Stack>
+      <Paragraph title="ARTICLES">
+        <Stack gap="md">
+          {articles.map((article) => (
+            <Stack key={article.title} gap='0'>
+              <Title order={5}>{article.title}</Title>
+              <Text>{article.publication} ({article.year})</Text>
+              <Link text="Read Article" url={article.url || ""} withArrow />
+            </Stack>
+          ))}
         </Stack>
-      </Card>
+      </Paragraph >
 
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Presentations
-          </Text>
-          <Stack gap="xs">
-            {presentations.map((presentation) => (
-              <Text key={presentation.title}>
-                <Text component="span" fw={600}>
-                  {presentation.title}
-                </Text>{' '}
-                — {presentation.event} ({presentation.year})
-              </Text>
-            ))}
-          </Stack>
+      <Paragraph title="PATENTS">
+        <Stack gap="md">
+          {patents.map((patent) => (
+            <Stack key={patent.number} gap="0">
+              <Title order={5}>{patent.title}</Title>
+              <Text>{patent.number} ({patent.year})</Text>
+              <Link text="View Patent" url={patent.url || ""} withArrow />
+            </Stack>
+          ))}
         </Stack>
-      </Card>
-
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Articles
-          </Text>
-          <Stack gap="xs">
-            {articles.map((article) => (
-              <Text key={article.title}>
-                <Text component="span" fw={600}>
-                  {article.title}
-                </Text>{' '}
-                — {article.publication} ({article.year})
-              </Text>
-            ))}
-          </Stack>
-        </Stack>
-      </Card>
-
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Patents
-          </Text>
-          <Stack gap="xs">
-            {patents.map((patent) => (
-              <Text key={patent.number}>
-                <Text component="span" fw={600}>
-                  {patent.title}
-                </Text>{' '}
-                — {patent.number} ({patent.year})
-              </Text>
-            ))}
-          </Stack>
-        </Stack>
-      </Card>
-
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Interests
-          </Text>
-          <Group gap="xs">
-            {interests.map((interest) => (
-              <Badge key={interest} color="secondary" variant="light" radius="xl">
-                {interest}
-              </Badge>
-            ))}
-          </Group>
-        </Stack>
-      </Card>
-    </Stack>
+      </Paragraph>
+    </Stack >
   )
 }
 

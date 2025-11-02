@@ -1,14 +1,26 @@
-import { Card, Container, Grid, Image, Stack, Text, Title } from '@mantine/core'
-import ContactLinks from '../components/ContactLinks'
+import { Container, Grid, Image, Stack, Text, Title } from '@mantine/core'
+import ContactAnchor from '../components/ContactAnchor'
 import profileData from '../utils/profileData'
 import bogdanPhoto from '../assets/bogdan_photo_1.jpg'
+import DefaultPage from '../components/DefaultPage'
+
+
 
 const Contact = () => {
   const { location, contacts } = profileData
 
   return (
-    <Container size="lg" py="xl">
-      <Grid gutter="xl" align="stretch">
+    <DefaultPage title='Contact'>
+      <Grid align="flex-start">
+        <Grid.Col span={{ base: 12, md: 8 }}>
+
+          <Stack gap="md">
+            <Text>The fastest way to connect with me is online, using {ContactAnchor(contacts.email)} or {ContactAnchor(contacts.linkedin)}.</Text>
+            <Text>Alternatively, we can meet somewhere near {location}.</Text>
+          </Stack>
+
+        </Grid.Col>
+
         <Grid.Col span={{ base: 12, md: 4 }}>
           <Image
             src={bogdanPhoto}
@@ -18,38 +30,8 @@ const Contact = () => {
             mx="auto"
           />
         </Grid.Col>
-
-        <Grid.Col span={{ base: 12, md: 8 }}>
-          <Stack gap="xl">
-            <Stack gap="xs">
-              <Title order={3}>
-                Contacts
-              </Title>
-            </Stack>
-
-            <Card withBorder p="lg" radius="md">
-              <Stack gap="sm">
-                <Text size="sm" tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-                  Online
-                </Text>
-                <ContactLinks contacts={contacts} />
-              </Stack>
-            </Card>
-
-            <Card withBorder p="lg" radius="md">
-              <Stack gap="sm">
-                <Text size="sm" tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-                  Offline
-                </Text>
-                <Text size="md">
-                  Somewhere near {location}
-                </Text>
-              </Stack>
-            </Card>
-          </Stack>
-        </Grid.Col>
       </Grid>
-    </Container>
+    </DefaultPage>
   )
 }
 
