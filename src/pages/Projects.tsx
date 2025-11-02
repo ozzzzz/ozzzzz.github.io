@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <DefaultPage title='Projects'>
       <Stack gap="xl">
-        <Text size="lg">
+        <Text>
           My side projects and research explorations. Will be updated soon.
         </Text>
 

@@ -101,21 +101,6 @@ const AboutDetailed = ({ data = profileData }: AboutDetailedProps) => {
           ))}
         </Stack>
       </Paragraph>
-
-      <Card withBorder p="lg" radius="md">
-        <Stack gap="sm">
-          <Text tt="uppercase" fw={600} style={{ letterSpacing: '0.2em' }}>
-            Interests
-          </Text>
-          <Group gap="xs">
-            {interests.map((interest) => (
-              <Badge key={interest} color="secondary" variant="light" radius="xl">
-                {interest}
-              </Badge>
-            ))}
-          </Group>
-        </Stack>
-      </Card>
     </Stack >
   )
 }
